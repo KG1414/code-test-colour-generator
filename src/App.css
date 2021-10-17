@@ -9,4 +9,6 @@
   height: 5px;
   float: left;
   border-radius: 100%;
+  padding: 0.2px;
+  margin: 0.2px;
 }
