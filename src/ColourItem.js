@@ -1,9 +1,14 @@
 import React from 'react';
 import ColourData from './ColourData';
+// import ColouredSquares from './ColouredSquares';
 
 const ColourItem = () => {
     console.log("ColourData ====== " + ColourData());
-    return <h1>Hello</h1>
+    return (
+        <div>
+            <ColourData />
+        </div>
+    )
 }
 
 export default ColourItem;

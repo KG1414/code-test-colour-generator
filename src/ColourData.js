@@ -1,9 +1,7 @@
-import { useState } from 'react';
+import React from 'react';
 
 const ColourData = () => {
-    const [rgbColours, setRgbColours] = useState(createColours());
-
-    // setRgbColours(createColours);
+    const rgbColours = createColours();
     // 32 x 32 x 32
 
     function rangeDivisibleByEight(start, end) {
@@ -72,12 +70,14 @@ const ColourData = () => {
         return array;
     }
 
-    function colourAtIndex(index) {
-        return rgbColours[index];
-    };
-
     return (
-        rgbColours
+        rgbColours.map((colour, index) => {
+            return (
+                <div style={{ width: '80%', textAlign: "center" }}>
+                    <div key={index} id={index} style={{ backgroundColor: colour }} className="square"></div>
+                </div>
+            )
+        })
     );
 }
 
